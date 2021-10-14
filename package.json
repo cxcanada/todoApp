@@ -7,7 +7,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npx parcel src/index.html",
-        "build": "npx parcel build src/index.html",
+        "build": "npx parcel build src/js/index.js",
         "clean:dev": "rm -rf .parcel-cache dist",
         "clean:git": "rm -rf .parcel-cache dist  node_modules"
     },
