@@ -7,7 +7,7 @@ const addIcon = function(className = "ui-logo") {
   </svg>
     `
 
-    elem = makeElement(templateString)
+    const elem = makeElement(templateString)
     return elem
 }
 export default addIcon;
