@@ -7,15 +7,15 @@ const todoPage = function() {
     const pageHeader = document.createElement('header')
     const BrandingHeaderElements = brandingHeader()
 
-    const userData = await dataFetcher('../data/todos.json')
-    let defaultItem = null
+    // const userData = await dataFetcher('../data/todos.json')
+    // let defaultItem = null
 
     pageHeader.append(BrandingHeaderElements)
 
-    for (var i = 0; i < 5; i++) {
-        defaultItem = render(userTemplate, userData[i])
-        pageHeader.append(defaultItem)
-    }
+    // for (var i = 0; i < 5; i++) {
+    //     defaultItem = render(userTemplate, userData[i])
+    //     pageHeader.append(defaultItem)
+    // }
 
     return pageHeader
 }

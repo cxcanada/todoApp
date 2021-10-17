@@ -1,5 +1,3 @@
-import { dataFetcher } from "./dataFetcher";
-import userTemplate from "../templates/userTemplate";
 import makeElement from "./makeElement";
 
 const render = function(template, data) {

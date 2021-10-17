@@ -2,7 +2,6 @@ import header from "../components/ui/header";
 import link from "../components/ui/link";
 import logo from "../components/icons/logo";
 import tagLine from "../components/ui/tagline";
-// import makeElement from "../utils/makeElement";
 
 const homePage = function() {
     const pageHeader = document.createElement('header')
