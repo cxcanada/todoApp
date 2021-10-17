@@ -1,5 +1,4 @@
-// Branding component for home page components: logo, header and tagline
-import makeElement from "../../utils/makeElement";
+// Combine branding components for todoPage: logo, header and tagline
 import header from "./header";
 import logo from "../icons/logo";
 import tagLine from "./tagline";
