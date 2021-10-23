@@ -440,13 +440,27 @@ table th {
 }
 
 .ui-small-logo {
-  width: 3rem;
+  width: 2.5rem;
+  margin-left: 7rem;
+  margin-top: -1rem;
+}
+
+.ui-branding-header, .ui-page-header {
+  margin: 0 auto;
+  background-color: #fafafa;
+  gap: 2rem;
+}
+.ui-branding-header h1, .ui-page-header h1 {
+  color: #a7451f;
+  font-weight: 500;
+}
+.ui-branding-header p, .ui-page-header p {
+  color: #cf4d36;
+  font-weight: 500;
 }
 
 .ui-page-header {
-  width: 480px;
   height: 100vh;
-  margin: 0 auto;
   text-align: center;
   padding: 3rem 0;
   display: -webkit-box;
@@ -456,23 +470,93 @@ table th {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fafafa;
-  gap: 2rem;
 }
 .ui-page-header h1 {
   font-size: 3rem;
-  font-weight: 500;
-  color: #a7451f;
   padding: 3rem;
 }
 .ui-page-header p {
-  font-size: 1rem;
-  color: #cf4d36;
-  font-weight: 500;
+  font-size: 1.5rem;
   margin-top: 3rem;
 }
 .ui-page-header ul {
   font-size: 1rem;
   color: #906622;
+}
+
+.ui-branding-header {
+  height: 8rem;
+}
+.ui-branding-header h1 {
+  font-size: 2rem;
+  display: inline-block;
+  line-height: 3rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+.ui-branding-header p {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+li:nth-child(even) {
+  background-color: #fef8dd;
+}
+
+li {
+  font-size: 1.2rem;
+  color: #b9542d;
+  background-color: #ffe7c7;
+  font-weight: 500;
+  padding: 2rem;
+}
+
+li p {
+  margin: 0.5rem;
+}
+
+li h2 {
+  font-size: 1.5rem;
+  color: #610345;
+  font-weight: 600;
+}
+
+.completed {
+  color: #ff0a0a;
+  font-weight: bold;
+}
+
+.incompleted {
+  display: none;
+}
+
+.btn {
+  border: 1px solid #610345;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  width: 5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-edit {
+  background-color: cornflowerblue;
+  margin-right: 1rem;
+}
+
+.btn-delete {
+  background-color: tomato;
+}
+
+.btn:hover {
+  background-color: wheat;
+  color: maroon;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

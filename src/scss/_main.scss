@@ -1,0 +1,14 @@
+.container {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: rgb(246, 236, 217);
+    padding: 3rem;
+    height: calc(100vh - 8rem);
+}
+
+.todo-content {
+    background-color: rgb(233, 233, 233);
+}

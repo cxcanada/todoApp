@@ -1,17 +1,33 @@
-.ui-link {
-    width: 30%;
+%links {
     background-color: bisque;
     font-size: 2rem;
     color: #a7451f;
     margin-top: 4rem;
-    margin-left: 35%;
+    align-self: center;
     border: #a7451f solid 1px;
     border-radius: 0.5rem;
+}
+
+.ui-link {
+    @extend %links;
+    width: 30%;
 }
 
 .ui-link:hover {
     background-color: #a7451f;
     font-size: 2.5rem;
+    color: bisque;
+    margin-top: 3.75rem;
+    text-decoration: none;
+}
+
+.to-home {
+    @extend %links;
+    margin-left: 9rem;
+}
+
+.to-home:hover {
+    background-color: #a7451f;
     color: bisque;
     margin-top: 3.75rem;
     text-decoration: none;

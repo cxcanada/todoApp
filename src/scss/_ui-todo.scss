@@ -1,0 +1,30 @@
+li:nth-child(even) {
+    background-color: #fef8dd;
+}
+
+li {
+    font-size: 1.2rem;
+    color: #b9542d;
+    background-color: #ffe7c7;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+li p {
+    margin: 0.5rem;
+}
+
+li h2 {
+    font-size: 1.5rem;
+    color: #610345;
+    font-weight: 600;
+}
+
+.completed {
+    color: rgb(255, 10, 10);
+    font-weight: bold;
+}
+
+.incompleted {
+    display: none;
+}

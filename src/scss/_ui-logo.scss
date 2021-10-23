@@ -9,6 +9,23 @@
     margin-top: -1rem;
 }
 
+.ui-not-found {
+    width: 40%;
+    margin-left: 6.5rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.add-todo {
+    margin-left: 40%;
+    width: 20%;
+    stroke: #dd7960;
+}
+
+.add-todo:hover {
+    cursor: pointer;
+}
+
 // .ui-add-logo {}
 // .ui-edit-logo {}
 // .ui-delete-logo {}

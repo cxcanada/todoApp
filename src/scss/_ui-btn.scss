@@ -1,0 +1,23 @@
+.btn {
+    border: 1px solid #610345;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    width: 5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-edit {
+    background-color: cornflowerblue;
+    margin-right: 1rem;
+}
+
+.btn-delete {
+    background-color: tomato;
+}
+
+.btn:hover {
+    background-color: wheat;
+    color: maroon;
+    font-weight: bold;
+    cursor: pointer;
+}
