@@ -1,5 +1,6 @@
 {
     "name": "todoapp",
+    "git": "https://github.com/cxcanada/todoApp.git",
     "version": "1.0.0",
     "description": "To do app - Assignment 1 - DMIT2008",
     "default": "src/index.html",
