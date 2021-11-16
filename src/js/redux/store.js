@@ -11,4 +11,8 @@ function getStore() {
     return store
 }
 
-export { createStore, getStore }
+function updateStore(newStore) {
+    return store = [...newStore]
+}
+
+export { createStore, getStore, updateStore }

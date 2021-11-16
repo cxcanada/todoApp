@@ -8,11 +8,11 @@ const todoItem = function({ id, title, category, isComplete, endDate }) {
         className = "incompleted"
     }
     const template = `       
-  <li class="employee" data-key="${id} class="todo-item">
+  <li data-key="${id}" class="todo-item">
     <h2>${category}</h2>
     <p> ${title}  -   Due: ${endDate}</p>
     <p class="${className}">Completed</p> 
-    <p class="controls"><button class="btn btn-edit">Edit</button><button class="btn btn-delete">Delete</button></p>      
+    <p class="controls" data-key="${id}"><button class="btn btn-edit" id="edit">Edit</button><button class="btn btn-delete" id="delete">Delete</button></p>      
   </li>        
   `
     return makeElement(template)

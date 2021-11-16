@@ -1,10 +1,12 @@
 import homePage from "../pages/home";
 import todoPage from "../pages/todo";
 import errorPage from "../pages/pageNotFound";
+import deletePage from "../pages/delete/delete";
 
 const routes = {
     "/": homePage,
     "/todo": todoPage,
+    "/delete": deletePage
 }
 
 const Router = function(pathname) {
@@ -24,4 +26,4 @@ const Router = function(pathname) {
     }
 }
 
-export default Router
+export { Router }

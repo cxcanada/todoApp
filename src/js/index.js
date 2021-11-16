@@ -1,4 +1,4 @@
-import Router from "./routes/route";
+import { Router } from "./routes/route";
 import { createStore } from "./redux/store";
 import { dataFetcher } from "./utils/dataFetcher";
 
