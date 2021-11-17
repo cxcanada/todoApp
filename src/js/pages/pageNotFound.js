@@ -9,6 +9,7 @@ const errorPage = function() {
     const content = document.createElement('div')
     content.classList.add("content")
     const BrandingHeaderElements = brandingHeader()
+
     const errMessage = errorMsg("404 Not Found :(")
     const linkElm = link("Home", "/", "to-home")
     const notFoundIcon = errorIcon('ui-not-found');

@@ -9,9 +9,9 @@ import { Router } from "../routes/route";
 const todoPage = function() {
     const onDeleteTodoItem = function(e) {
         const itemId = { id: e.currentTarget.parentElement.dataset.key }
-        console.log(itemId)
         Router("/delete", itemId)
     }
+
     const todos = getStore()
     console.log(todos)
     const page = document.createElement("div")
@@ -21,6 +21,9 @@ const todoPage = function() {
     const brandingHeaderElements = brandingHeader()
     const container = todoList()
     const addNewTodo = addIcon("add-todo")
+    addNewTodo.addEventListener("click", function(e) {
+        Router("/add")
+    })
     page.append(brandingHeaderElements)
     content.append(addNewTodo)
     if (todos !== null) {

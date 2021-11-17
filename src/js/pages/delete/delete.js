@@ -1,16 +1,35 @@
-import makeElement from "../../utils/makeElement"
+import brandingHeader from "../../components/ui/brandingHeader"
 import button from "../../components/ui/button"
 import { Router } from "../../routes/route"
 import { getStore } from "../../redux/store"
 import reducer from "../../redux/reducers"
+import todoDisplay from "../../components/cards/todoDisplay"
 
-const cancelButton = button("cancel")
-const deleteButton = button("delete")
+const cancelButton = button("Cancel")
+const deleteButton = button("Delete")
 
 
 const deletePage = function(props) {
     console.log(props)
+    console.log(props.id)
     const page = document.createElement('div')
+    page.classList.add("container")
+    const content = document.createElement('div')
+    content.classList.add("content")
+    const BrandingHeaderElements = brandingHeader()
+
+    // variable for todo item card display
+    let selectedTodo
+
+    // filter through store to get selected todo item
+    for (let i = 0; i <= getStore().length - 1; i++) {
+        if (getStore()[i].id == props.id) {
+            selectedTodo = getStore()[i]
+        }
+    }
+
+    // create todo item element
+    const currentTodo = todoDisplay(selectedTodo)
 
     function onCancelDelete(e) {
         Router('/todo')
@@ -21,29 +40,22 @@ const deletePage = function(props) {
             return (todoItem.id === props.id)
         })
 
+        console.log(index)
+
         const action = {
             type: 'delete',
             payload: { index },
             cb: () => Router('/todo')
         }
-
-        reducer()
+        reducer(action)
     }
 
-
-    let headerTemplate = `
-        <header class="welcome center-in-page">
-            <h1>Delete A Task</h1>
-            <p>Remove A Task From List</p> 
-            <div></div>
-        </header>
-    `
-    const pageHeader = makeElement(headerTemplate)
     cancelButton.addEventListener('click', onCancelDelete)
     deleteButton.addEventListener('click', onDeleteTodo)
 
-    pageHeader.querySelector('div').append(cancelButton, deleteButton)
-    page.append(pageHeader)
+    content.append(currentTodo)
+    content.append(cancelButton, deleteButton)
+    page.append(BrandingHeaderElements, content)
 
     return page
 }

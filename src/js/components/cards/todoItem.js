@@ -1,5 +1,6 @@
 import makeElement from "../../utils/makeElement";
 
+// todoItem template with buttons for todo(directory) page.
 const todoItem = function({ id, title, category, isComplete, endDate }) {
     let className = null
     if (isComplete) {
