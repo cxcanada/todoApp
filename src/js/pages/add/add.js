@@ -1,10 +1,8 @@
 import brandingHeader from "../../components/ui/brandingHeader"
 import button from "../../components/ui/button"
 import { Router } from "../../routes/route"
-import { getStore } from "../../redux/store"
 import reducer from "../../redux/reducers"
-import form from "../../components/ui/form/form"
-import input from "../../components/ui/input"
+import { emptyForm } from "../../components/ui/form"
 import { v4 as uuidv4 } from 'uuid';
 
 const cancelButton = button("Cancel")
@@ -18,19 +16,14 @@ const addPage = function() {
     const content = document.createElement('div')
     content.classList.add("content")
     const BrandingHeaderElements = brandingHeader()
-    const userForm = form()
+    const userForm = emptyForm()
 
-
-
+    // event handler
     function onCancelDelete(e) {
         Router('/todo')
     }
 
     function onAddTodo(e) {
-        // const index = getStore().findIndex((todoItem) => {
-        //     return (todoItem.id === props.id)
-        // })
-        // console.log(index)
         // handle form values
         let category = document.querySelector("#category");
         let title = document.querySelector("#title");
@@ -52,7 +45,6 @@ const addPage = function() {
 
     }
 
-    // userForm.append(addButton, cancelButton)
     content.append(userForm, addButton, cancelButton)
     page.append(BrandingHeaderElements)
     page.append(content)
@@ -60,8 +52,6 @@ const addPage = function() {
 
     cancelButton.addEventListener('click', onCancelDelete)
     addButton.addEventListener('click', onAddTodo)
-
-
 
     return page
 }

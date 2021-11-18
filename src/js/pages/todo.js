@@ -7,13 +7,23 @@ import { Router } from "../routes/route";
 
 
 const todoPage = function() {
+
+    // event handler
     const onDeleteTodoItem = function(e) {
         const itemId = { id: e.currentTarget.parentElement.dataset.key }
         Router("/delete", itemId)
     }
 
+    const onEditTodoItem = function(e) {
+        const itemId = { id: e.currentTarget.parentElement.dataset.key }
+        Router("/edit", itemId)
+    }
+
+    // read data 
     const todos = getStore()
     console.log(todos)
+
+    // page layout
     const page = document.createElement("div")
     const content = document.createElement('div')
     content.classList.add("todo-content")
@@ -31,15 +41,12 @@ const todoPage = function() {
         const elements = todos.map(elem => todoItem(elem))
         elements.forEach(element => {
             element.querySelector(".btn-delete").addEventListener("click", onDeleteTodoItem)
+            element.querySelector(".btn-edit").addEventListener("click", onEditTodoItem)
             ul.append(element)
         })
         content.append(container)
     }
     page.append(content)
-
-
-
-
 
     return page
 }

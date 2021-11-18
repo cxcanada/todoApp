@@ -8,10 +8,12 @@ import todoDisplay from "../../components/cards/todoDisplay"
 const cancelButton = button("Cancel")
 const deleteButton = button("Delete")
 
-
 const deletePage = function(props) {
+    // checking props
     console.log(props)
     console.log(props.id)
+
+    // page layout
     const page = document.createElement('div')
     page.classList.add("container")
     const content = document.createElement('div')
@@ -31,6 +33,7 @@ const deletePage = function(props) {
     // create todo item element
     const currentTodo = todoDisplay(selectedTodo)
 
+    // event handler
     function onCancelDelete(e) {
         Router('/todo')
     }
@@ -39,9 +42,6 @@ const deletePage = function(props) {
         const index = getStore().findIndex((todoItem) => {
             return (todoItem.id === props.id)
         })
-
-        console.log(index)
-
         const action = {
             type: 'delete',
             payload: { index },

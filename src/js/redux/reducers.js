@@ -15,6 +15,15 @@ function reducer(action) {
             return "remove todoitem";
 
         case "edit":
+            const editStore = getStore()
+            const editedItem = action.payload
+            const targetIndex = getStore().findIndex((todoItem) => {
+                return (todoItem.id === action.payload.id)
+            })
+            editStore[targetIndex] = action.payload
+            console.log(editStore)
+            updateStore(editStore)
+            action.cb()
             return "edit todoitem";
 
         case "add":

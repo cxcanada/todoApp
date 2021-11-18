@@ -1,14 +1,16 @@
 import homePage from "../pages/home";
 import todoPage from "../pages/todo";
 import errorPage from "../pages/pageNotFound";
-import deletePage from "../pages/delete/delete";
-import addPage from "../pages/add/add";
+import deletePage from "../pages/delete";
+import addPage from "../pages/add";
+import editPage from "../pages/edit";
 
 const routes = {
     "/": homePage,
     "/todo": todoPage,
     "/delete": deletePage,
-    "/add": addPage
+    "/add": addPage,
+    "/edit": editPage
 }
 
 const Router = function(pathname, id = null) {

@@ -3,44 +3,44 @@
     "category": "Daily",
     "title": "Feed my dog.",
     "isComplete": true,
-    "startDate": "Wednesday October 13",
+    "startDate": "2021-10-13",
     "startTime": "7:30AM",
-    "endDate": "Wednesday October 13",
+    "endDate": "2021-10-13",
     "endTime": "7:45AM"
 }, {
     "id": "2",
     "category": "Weekly",
     "title": "Water plants.",
     "isComplete": false,
-    "startDate": "Wednesday October 18",
+    "startDate": "2021-10-14",
     "startTime": "8:00AM",
-    "endDate": "Wednesday October 14",
+    "endDate": "2021-10-18",
     "endTime": "6:00PM"
 }, {
     "id": "3",
     "category": "Monthly",
     "title": "Water plants.",
     "isComplete": true,
-    "startDate": "Wednesday October 18",
+    "startDate": "2021-10-14",
     "startTime": "8:00AM",
-    "endDate": "Wednesday October 14",
+    "endDate": "2021-10-18",
     "endTime": "6:00PM"
 }, {
     "id": "4",
     "category": "Quarterly",
     "title": "Pay rent",
     "isComplete": true,
-    "startDate": "Monday September 13",
+    "startDate": "2021-09-13",
     "startTime": "8:00AM",
-    "endDate": "Monday December 13",
+    "endDate": "2021-12-13",
     "endTime": "8:00AM"
 }, {
     "id": "5",
     "category": "Annually",
     "title": "Renew internet contract",
     "isComplete": false,
-    "startDate": "Friday January 1",
+    "startDate": "2021-01-01",
     "startTime": "8:00AM",
-    "endDate": "Friday December 31",
+    "endDate": "2021-12-31",
     "endTime": "11:59PM"
 }]

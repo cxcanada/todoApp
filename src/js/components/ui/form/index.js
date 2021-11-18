@@ -1,2 +1,2 @@
-import form from "./form"
-export default form
+import { emptyForm, uncheckedForm, checkedForm } from "./form"
+export { emptyForm, uncheckedForm, checkedForm }
