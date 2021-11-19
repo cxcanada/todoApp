@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { getStore } from "../../redux/store"
 
 const cancelButton = button("Cancel")
-const editButton = button("Edit")
+const editButton = button("Edit", "btn-edit")
 
 const editPage = function(props) {
     // page layout
@@ -40,8 +40,15 @@ const editPage = function(props) {
         userForm = uncheckedForm(selectedTodo)
     }
 
+    // cleanup function to remove event listener after click
+    function cleanUp() {
+        cancelButton.removeEventListener('click', onCancelDelete)
+        editButton.removeEventListener('click', onEditTodo)
+    }
+
     // event handler
     function onCancelDelete(e) {
+        cleanUp()
         Router('/todo')
     }
 
@@ -51,8 +58,8 @@ const editPage = function(props) {
         let title = document.querySelector("#title")
         let completed = document.querySelector("#complete")
         let endtime = document.querySelector("#endtime")
-
-        const action = {
+        console.log(e.currentTarget.parentElement)
+        let action = {
             type: 'edit',
             payload: {
                 "id": selectedTodo.id,
@@ -63,6 +70,7 @@ const editPage = function(props) {
             },
             cb: () => Router('/todo')
         }
+        cleanUp()
         reducer(action)
     }
 

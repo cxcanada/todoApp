@@ -1,0 +1,25 @@
+.ui-form {
+  color: #a7451f;
+  font-size: 1.1rem;
+  padding-left: 2rem;
+}
+.ui-form input {
+  height: 3rem;
+  width: 87%;
+  border-radius: 0.2rem;
+  border: cadetblue solid 1px;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+.ui-form input[type=checkbox] {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline;
+}
+.ui-form label {
+  display: block;
+}
+/*# sourceMappingURL=styles.module.css.map */

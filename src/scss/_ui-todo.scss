@@ -1,13 +1,17 @@
-li:nth-child(even) {
-    background-color: #fef8dd;
-}
-
+// li:nth-child(even) {
+//     border-left: 2rem solid rgb(46, 15, 184);
+// }
 li {
     font-size: 1.2rem;
     color: #b9542d;
-    background-color: #ffe7c7;
+    background-color: #f3f1ef;
     font-weight: 500;
-    padding: 2rem;
+    padding: 2rem 4rem;
+    padding-left: 5rem;
+    border: #b9542d 1px solid;
+    border-left: 2rem solid rgb(173, 84, 62);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
 }
 
 li p {
@@ -27,4 +31,20 @@ li h2 {
 
 .incompleted {
     display: none;
+}
+
+.weekly {
+    border-left: 2rem solid rgb(219, 155, 102);
+}
+
+.monthly {
+    border-left: 2rem solid rgb(80, 160, 49);
+}
+
+.annually {
+    border-left: 2rem solid rgb(48, 68, 124);
+}
+
+.quarterly {
+    border-left: 2rem solid rgb(118, 54, 134);
 }

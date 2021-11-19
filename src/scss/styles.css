@@ -408,20 +408,35 @@ table th {
   text-align: left;
 }
 
-.ui-link {
-  width: 30%;
+.to-home, .ui-link {
   background-color: bisque;
   font-size: 2rem;
   color: #a7451f;
   margin-top: 4rem;
-  margin-left: 35%;
+  -ms-flex-item-align: center;
+      align-self: center;
   border: #a7451f solid 1px;
   border-radius: 0.5rem;
+}
+
+.ui-link {
+  width: 30%;
 }
 
 .ui-link:hover {
   background-color: #a7451f;
   font-size: 2.5rem;
+  color: bisque;
+  margin-top: 3.75rem;
+  text-decoration: none;
+}
+
+.to-home {
+  margin-left: 9rem;
+}
+
+.to-home:hover {
+  background-color: #a7451f;
   color: bisque;
   margin-top: 3.75rem;
   text-decoration: none;
@@ -443,6 +458,23 @@ table th {
   width: 2.5rem;
   margin-left: 7rem;
   margin-top: -1rem;
+}
+
+.ui-not-found {
+  width: 40%;
+  margin-left: 6.5rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.add-todo {
+  margin-left: 40%;
+  width: 20%;
+  stroke: #dd7960;
+}
+
+.add-todo:hover {
+  cursor: pointer;
 }
 
 .ui-branding-header, .ui-page-header {
@@ -505,6 +537,16 @@ table th {
   margin: 0 auto;
 }
 
+.content {
+  background-color: #f6ecd9;
+  padding: 3rem;
+  height: calc(100vh - 8rem);
+}
+
+.todo-content {
+  background-color: #e9e9e9;
+}
+
 li:nth-child(even) {
   background-color: #fef8dd;
 }
@@ -514,7 +556,8 @@ li {
   color: #b9542d;
   background-color: #ffe7c7;
   font-weight: 500;
-  padding: 2rem;
+  padding: 2rem 4rem;
+  padding-left: 5rem;
 }
 
 li p {
@@ -544,6 +587,11 @@ li h2 {
   margin-top: 0.5rem;
 }
 
+.btn-add {
+  background-color: #96f09e;
+  margin-right: 1rem;
+}
+
 .btn-edit {
   background-color: cornflowerblue;
   margin-right: 1rem;
@@ -558,5 +606,13 @@ li h2 {
   color: maroon;
   font-weight: bold;
   cursor: pointer;
+}
+
+.error {
+  color: maroon;
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */

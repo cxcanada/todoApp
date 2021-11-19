@@ -9,9 +9,10 @@ const todoDisplay = function({ id, title, category, isComplete, endDate }) {
         className = "incompleted"
     }
     const template = `       
-    <div class="todo-item">
+    <div class="todo-display">
         <h2>${category}</h2>
-        <p> ${title}  -   Due: ${endDate}</p>
+        <p> ${title} </p>
+        <p>Due By: ${endDate}</p>
         <p class="${className}">Completed</p> 
     </div>        
     `

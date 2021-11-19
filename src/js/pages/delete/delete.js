@@ -6,7 +6,7 @@ import reducer from "../../redux/reducers"
 import todoDisplay from "../../components/cards/todoDisplay"
 
 const cancelButton = button("Cancel")
-const deleteButton = button("Delete")
+const deleteButton = button("Delete", "btn-delete")
 
 const deletePage = function(props) {
     // checking props
@@ -33,20 +33,29 @@ const deletePage = function(props) {
     // create todo item element
     const currentTodo = todoDisplay(selectedTodo)
 
+
+    // cleanup function to remove event listener after click
+    function cleanUp() {
+        cancelButton.removeEventListener('click', onCancelDelete)
+        deleteButton.removeEventListener('click', onDeleteTodo)
+    }
+
     // event handler
     function onCancelDelete(e) {
+        cleanUp()
         Router('/todo')
     }
 
     function onDeleteTodo(e) {
-        const index = getStore().findIndex((todoItem) => {
+        let index = getStore().findIndex((todoItem) => {
             return (todoItem.id === props.id)
         })
-        const action = {
+        let action = {
             type: 'delete',
             payload: { index },
             cb: () => Router('/todo')
         }
+        cleanUp()
         reducer(action)
     }
 
@@ -54,7 +63,7 @@ const deletePage = function(props) {
     deleteButton.addEventListener('click', onDeleteTodo)
 
     content.append(currentTodo)
-    content.append(cancelButton, deleteButton)
+    content.append(deleteButton, cancelButton)
     page.append(BrandingHeaderElements, content)
 
     return page

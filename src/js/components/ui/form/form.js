@@ -1,23 +1,23 @@
 import makeElement from "../../../utils/makeElement"
 import * as styles from './styles.module.scss'
 
-function emptyForm() {
+function emptyForm(uiStyles = "ui-form") {
     const template = `
-    <form class="${styles}">
+    <form class="${styles[uiStyles]}">
         <label for="category">Category
-            <input id="category" type="text" required>
+        <input id="category" type="text" required>
         </label>
 
         <label for="title">Title
-            <input id="title" type="text" required>
-        </label>
-
-        <label for="complete">Complete
-            <input id="complete" type="checkbox">
+        <input id="title" type="text" required>
         </label>
 
         <label for="endtime">End Date
-            <input id="endtime" type="date" required>
+        <input id="endtime" type="date" required>
+        </label>
+        
+        <label for="complete">Complete
+        <input id="complete" type="checkbox">
         </label>
     </form>
     `
@@ -25,23 +25,20 @@ function emptyForm() {
     return element
 }
 
-function uncheckedForm({ title = "", category = "", endDate = "" }) {
+function uncheckedForm({ title = "", category = "", endDate = "" }, uiStyles = "ui-form") {
     const template = `
-    <form class="${styles}">
+    <form class="${styles[uiStyles]}">
         <label for="category">Category
-            <input id="category" type="text" value="${category}" required>
+        <input id="category" type="text" value="${category}" required>
         </label>
-
-        <label for="title">Title
-            <input id="title" type="text" value="${title}" required>
+        <label for="title">Title 
+        <input id="title" type="text" value="${title}" required>
         </label>
-
-        <label for="complete">Complete
-            <input id="complete" type="checkbox">
-        </label>
-
         <label for="endtime">End Date
-            <input id="endtime" type="date" value="${endDate}" required>
+        <input id="endtime" type="date" value="${endDate}" required>
+        </label>
+        <label for="complete">Complete
+        <input id="complete" type="checkbox">
         </label>
     </form>
     `
@@ -49,23 +46,20 @@ function uncheckedForm({ title = "", category = "", endDate = "" }) {
     return element
 }
 
-function checkedForm({ title = "", category = "", endDate = "" }) {
+function checkedForm({ title = "", category = "", endDate = "" }, uiStyles = "ui-form") {
     const template = `
-    <form class="${styles}">
+    <form class="${styles[uiStyles]}">
         <label for="category">Category
-            <input id="category" type="text" value="${category}" required>
+        <input id="category" type="text" value="${category}" required>
         </label>
-
         <label for="title">Title
-            <input id="title" type="text" value="${title}" required>
+        <input id="title" type="text" value="${title}" required>
         </label>
-
-        <label for="complete">Complete
-            <input id="complete" checked  type="checkbox">
-        </label>
-
         <label for="endtime">End Date
-            <input id="endtime" type="date" value="${endDate}" required>
+        <input id="endtime" type="date" value="${endDate}" required>  
+        </label>
+        <label for="complete">Complete
+        <input id="complete" checked type="checkbox">
         </label>
     </form>
     `

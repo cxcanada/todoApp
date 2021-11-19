@@ -1,5 +1,4 @@
 [{
-    "id": "1",
     "category": "Daily",
     "title": "Feed my dog.",
     "isComplete": true,
@@ -8,7 +7,6 @@
     "endDate": "2021-10-13",
     "endTime": "7:45AM"
 }, {
-    "id": "2",
     "category": "Weekly",
     "title": "Water plants.",
     "isComplete": false,
@@ -17,7 +15,6 @@
     "endDate": "2021-10-18",
     "endTime": "6:00PM"
 }, {
-    "id": "3",
     "category": "Monthly",
     "title": "Water plants.",
     "isComplete": true,
@@ -26,7 +23,6 @@
     "endDate": "2021-10-18",
     "endTime": "6:00PM"
 }, {
-    "id": "4",
     "category": "Quarterly",
     "title": "Pay rent",
     "isComplete": true,
@@ -35,7 +31,6 @@
     "endDate": "2021-12-13",
     "endTime": "8:00AM"
 }, {
-    "id": "5",
     "category": "Annually",
     "title": "Renew internet contract",
     "isComplete": false,

@@ -6,31 +6,27 @@ function reducer(action) {
     switch (action.type) {
         case "delete":
             // grabing the current store
-            const store = getStore()
-            const index = action.payload.index;
-            const newStore = [...store.slice(0, index), ...store.slice(index + 1)]
-            console.log(newStore)
+            let store = getStore()
+            let index = action.payload.index;
+            let newStore = [...store.slice(0, index), ...store.slice(index + 1)]
             updateStore(newStore)
             action.cb()
             return "remove todoitem";
 
         case "edit":
-            const editStore = getStore()
-            const editedItem = action.payload
-            const targetIndex = getStore().findIndex((todoItem) => {
+            let editStore = getStore()
+            let editIndex = getStore().findIndex((todoItem) => {
                 return (todoItem.id === action.payload.id)
             })
-            editStore[targetIndex] = action.payload
-            console.log(editStore)
-            updateStore(editStore)
+            let editNewStore = [...editStore.slice(0, editIndex), action.payload, ...editStore.slice(editIndex + 1)]
+            updateStore(editNewStore)
             action.cb()
             return "edit todoitem";
 
         case "add":
-            const addStore = getStore()
-            const newTodo = action.payload
-            const addNewStore = [...addStore, newTodo]
-            console.log(addNewStore)
+            let addStore = getStore()
+            let newTodo = action.payload
+            let addNewStore = [...addStore, newTodo]
             updateStore(addNewStore)
             action.cb()
             return "add new todoitem";

@@ -1,2 +1,2 @@
-.buttonBase{color:#527d8d;border:none;-webkit-box-shadow:0 0 1px 1px rgba(39,87,105,.434);box-shadow:0 0 1px 1px rgba(39,87,105,.434);padding:.25rem 1rem;border-radius:4px;margin:1rem .25rem;background-color:rgba(190,203,208,.25)}
+.btn-delete,.btn-edit,.btn-add,.btn{border:1px solid #610345;padding:.5rem;border-radius:.2rem;width:5rem;margin-top:2rem;margin-right:3rem;margin-left:2rem}.btn{background-color:bisque}.btn-add{background-color:#96f09e}.btn-edit{background-color:#6495ed}.btn-delete{margin-left:3.6rem;background-color:tomato}.btn:hover{background-color:wheat;color:maroon;font-weight:bold;cursor:pointer}
 /*# sourceMappingURL=styles.module.min.css.map */
